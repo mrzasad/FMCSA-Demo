@@ -1,0 +1,59 @@
+﻿
+@model Presentation.Models.LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "~/Views/Shared/_LayoutUnAuth.cshtml";
+
+}
+<!-- Material form subscription -->
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4 FMCDemo-gradient">
+        <strong>Welcome</strong>
+    </h5>
+    <!--Card content-->
+    <div class="card-body px-lg-5">
+
+        <!-- Form -->
+        <form id="account" method="post" asp-controller="Account" asp-action="Login">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="md-form mt-3">
+                <label asp-for="@Model.Email"></label>
+                <input asp-for="@Model.Email" type="email" class="form-control" />
+                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+            </div>
+            <div class="md-form mt-3">
+                <label asp-for="@Model.Password"></label>
+                <input asp-for="@Model.Password" type="password" class="form-control" />
+                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+            </div>
+
+
+            <input asp-for="@Model.RememberMe" type="checkbox" class="form-check-input" />
+            <label asp-for="@Model.RememberMe" class="form-check-label">
+                @Html.DisplayNameFor(m => m.RememberMe)
+            </label>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-blue-grey btn-rounded btn-block z-depth-0 my-4 waves-effect">Log in</button>
+            </div>
+        </form>
+
+        <!-- Form -->
+
+    </div>
+
+</div>
+<!-- Material form subscription -->
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("label").addClass("active");
+    })
+</script>

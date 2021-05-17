@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FMCSA Demo</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="~/lib/mdb/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Material Design Bootstrap -->
+    <link href="~/lib/mdb/css/mdb.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <style>
+        .modal-right{
+            width:380px !important;
+        }
+    </style>
+    @RenderSection("Styles", required: false)
+</head>
+<body class="fixed-sn cyan-skin">
+    <partial name="_Header" />
+
+    <partial name="_SideNav" />
+    <main>
+        <div class="container-fluid">
+
+            @RenderBody()
+        </div>
+    </main>
+    <br />
+    <br />
+    <br />
+    @*<partial name="_Footer" />*@
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="~/lib/mdb/js/jquery-3.4.0.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="~/lib/mdb/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="~/lib/mdb/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="~/lib/mdb/js/mdb.min.js"></script>
+
+    @RenderSection("Scripts", required: false)
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+</body>
+</html>
