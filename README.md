@@ -1,5 +1,5 @@
-# FMCSA-Demo
-Global Search for Federal Motor Carrier Safety Administration demo
+# FMCSA-Search Demo
+Global Search demo for Federal Motor Carrier Safety Administration 
 
 Code Configuration
 In order to configure FMCSA database repository, please Select Presentation Project as Startup project. Pass correct connection-string inside appsettings.Development.json.
